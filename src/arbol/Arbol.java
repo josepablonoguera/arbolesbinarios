@@ -4,6 +4,8 @@
  */
 package arbol;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Pablo
@@ -16,7 +18,12 @@ public class Arbol {
         nodoar = null;
 
     }
-
+    public ArrayList<String> obtenerProvincia(int provincia){
+        ArrayList<String> lista =  new ArrayList();
+        nodoar.busquedaProvincia(lista, provincia);
+        return lista;
+        
+    }
     public NodoArbol retornaraiz() {
         return (nodoar);
     }
@@ -25,13 +32,13 @@ public class Arbol {
      *synchronized
      *apila procesos que luego se llevaran a cabo
      */
-    public synchronized void insertarNodo(int d) {
+    public synchronized void insertarNodo(Persona nuevaPersona) {
 
         if (nodoar == null) {
-            nodoar = new NodoArbol(d);
+            nodoar = new NodoArbol(nuevaPersona);
             System.out.println("\nInsertado en la Raiz...");
         } else {
-            nodoar.insertar(d);
+            nodoar.insertar(nuevaPersona);
         }
     }//fin insertarNodo
 

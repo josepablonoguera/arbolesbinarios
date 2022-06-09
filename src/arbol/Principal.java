@@ -8,13 +8,7 @@ public class Principal {
     public static void main(String[] args) {
         Arbol miArbol = new Arbol();
         
-        miArbol.insertarNodo(5);
-        miArbol.insertarNodo(8);
-        miArbol.insertarNodo(9);
-        miArbol.insertarNodo(7);
-        miArbol.insertarNodo(1);
-        miArbol.insertarNodo(3);
-        miArbol.insertarNodo(0);
+
 
         
         System.out.println("");
